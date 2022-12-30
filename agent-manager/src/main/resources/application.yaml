@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: winter-agent-manager
+server:
+  port: 8088

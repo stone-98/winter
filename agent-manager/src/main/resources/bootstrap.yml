@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: ${winter-prop.spring.application.name:agent-manager}
+  cloud:
+    nacos:
+      config:
+        username: ${winter-prop.spring.cloud.nacos.username:nacos}
+        password: ${winter-prop.spring.cloud.nacos.password:nacos}
+        server-addr: ${winter-prop.spring.cloud.nacos.server-addr:127.0.0.1:8848}
+        namespace: ${winter-prop.spring.cloud.nacos.namespace:dev}
+        group: ${winter-prop.spring.cloud.nacos.group:default}
+        file-extension: yaml
+      discovery:
+        namespace: ${winter-prop.spring.cloud.nacos.namespace:dev}
+        username: ${winter-prop.spring.cloud.nacos.username:nacos}
+        password: ${winter-prop.spring.cloud.nacos.password:nacos}
+        server-addr: ${winter-prop.spring.cloud.nacos.server-addr:127.0.0.1:8848}
+        group: ${winter-prop.spring.cloud.nacos.group:default}
+        ## 注册的服务名称
+        service: ${winter-prop.nacos.instance.appname:${spring.application.name}}
+        ## 是否注册
+        register-enabled: ${winter-prop.nacos.instance.register-enabled:true}
+        ## 注册ip地址
+        ip: ${winter-prop.nacos.instance.register-ip:}
